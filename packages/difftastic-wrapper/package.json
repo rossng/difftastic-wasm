@@ -1,0 +1,34 @@
+{
+    "name": "@difftastic-wasm/difftastic-wrapper",
+    "version": "0.0.0",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rossng/difftastic-wasm.git",
+        "directory": "packages/difftastic-wrapper"
+    },
+    "author": "Ross Gardiner",
+    "license": "BlueOak-1.0.0",
+    "bugs": {
+        "url": "https://github.com/rossng/difftastic-wasm/issues"
+    },
+    "homepage": "https://github.com/rossng/difftastic-wasm",
+    "scripts": {
+        "build": "cargo build && wasm-pack build && rm pkg/package.json",
+        "preinstall": "npx -y only-allow pnpm"
+    },
+    "files": [
+        "pkg"
+    ],
+    "module": "./pkg/difftastic_wrapper.js",
+    "exports": {
+        ".": "./pkg/difftastic_wrapper.js"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^4.9.3",
+        "wasm-pack": "^0.10.3"
+    }
+}

@@ -1,0 +1,3 @@
+{
+    "rust-analyzer.linkedProjects": ["packages/difftastic-wrapper/Cargo.toml"]
+}

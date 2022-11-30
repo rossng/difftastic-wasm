@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "tamasfe.even-better-toml",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "rust-lang.rust-analyzer"
+    ]
+}

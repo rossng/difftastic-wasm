@@ -1,0 +1,54 @@
+{
+    "name": "difftastic-wasm",
+    "description": "Try out Difftastic in your browser.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rossng/difftastic-wasm.git"
+    },
+    "scripts": {
+        "build": "pnpm -r build",
+        "build:tsc": "tsc --build",
+        "lint-staged": "lint-staged",
+        "prepare": "husky install",
+        "version": "changeset version",
+        "release": "changeset publish",
+        "version:dev": "changeset version --snapshot dev",
+        "release:dev": "changeset publish --tag dev",
+        "test": "pnpm -r test"
+    },
+    "author": "Ross Gardiner",
+    "license": "BlueOak-1.0.0",
+    "bugs": {
+        "url": "https://github.com/rossng/difftastic-wasm/issues"
+    },
+    "homepage": "https://github.com/rossng/difftastic-wasm#readme",
+    "dependencies": {
+        "typescript": "^4.9.3"
+    },
+    "devDependencies": {
+        "@changesets/changelog-github": "^0.4.7",
+        "@changesets/cli": "^2.25.2",
+        "@commitlint/cli": "^17.3.0",
+        "@commitlint/config-conventional": "^17.3.0",
+        "@typescript-eslint/eslint-plugin": "^5.45.0",
+        "@typescript-eslint/parser": "^5.45.0",
+        "eslint": "^8.28.0",
+        "eslint-plugin-react": "^7.31.11",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.0.4",
+        "prettier": "^2.8.0",
+        "prettier-plugin-organize-imports": "^3.2.1"
+    },
+    "packageManager": "pnpm@7.17.1",
+    "pnpm": {
+        "overrides": {
+            "csstype": "3.1.0",
+            "framer-motion": "7.1.0"
+        }
+    },
+    "lint-staged": {
+        "*.js": "eslint --cache --fix",
+        "*.{js,jsx,ts,tsx,css,json,md}": "prettier --write"
+    }
+}
